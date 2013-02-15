@@ -37,6 +37,12 @@ Using zip
    #. Enable theme
    #. Save
 
+Customization
+=============
+
+You can customize the generated bootstrap files using the `Diazo Bootstrap
+Framework <https://github.com/veit/diazo_bootstrap>`_.
+
 Bug tracker
 ===========
 
