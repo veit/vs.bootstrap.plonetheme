@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Base · Twitter Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+
+  </head>
+
+  <body  onload="prettyPrint()" data-spy="scroll" data-target=".sidebar">
+
+    <!-- Global Navbar -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">
+            <i class="icon-home"></i>
+          </a>
+          <div class="nav-collapse collapse">
+            <div id="globalnav">
+              <ul class="nav">
+                <li>
+                  <a href="#" />
+                </li>
+              </ul>
+            </div>
+            <ul class="nav pull-right">
+              <li id="account" class="dropdown">
+                <a href="#"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">
+                    <i class="icon-user"></i>
+                      Account
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">Action</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav pull-right">
+              <li id="language-selector" class="dropdown">
+                <a href="#"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">
+                      Current language
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">Optional language</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form id="global-nav-search" class="navbar-search pull-right">
+              <input type="text" class="search-query" placeholder="Search">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="span3 sidebar" id="left-column">
+          <ul class="nav nav-list sidenav">
+            <li><a href="#"><span>nav entry<i class="icon-chevron-right"></i></span></a></li>
+          </ul>
+        </div>
+        <div class="span3 sidebar" id="portletmanager-plone-leftcolumn" />
+
+        <div class="span6">
+          <ul class="breadcrumb">
+            <li class="home"><a href="#">Home</a> <span class="divider">/</span></li>
+            <li class="breadcrumbs-1"><a href="#">Level 1</a> <span class="divider">/</span></li>
+            <li class="breadcrumbs-2"><a href="#">Level 2</a> <span class="divider">/</span></li>
+            <li class="breadcrumbs-3"><a href="#">Level 3</a> <span class="divider">/</span></li>
+            <li class="breadcrumbs-4"><a href="#">Level 4</a> <span class="divider">/</span></li>
+            <li class="breadcrumbs-5"><a href="#">Level 5</a> <span class="divider">/</span></li>
+            <li class="breadcrumbs-6"><a href="#">Level 6</a> <span class="divider">/</span></li>
+            <li class="breadcrumbs-7"><a href="#">Level 7</a> <span class="divider">/</span></li>
+            <li class="active">Data</li>
+          </ul>
+
+          <div class="editable">
+            <!-- Edit Navbar -->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="container">
+                  <div>
+                    <ul class="nav">
+                      <li id="file" class="dropdown">
+                        <a href="#"
+                           class="dropdown-toggle"
+                           data-toggle="dropdown">
+                            File
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li class="view-actions">
+                            <a href="#">View</a>
+                          </li>
+                          <li class=manage-portlets>
+                            <a href="#" />
+                          </li>
+                        </ul>
+                      </li>
+                      <li id="add" class="dropdown">
+                        <a href="#"
+                           class="dropdown-toggle"
+                           data-toggle="dropdown">
+                              Add
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#">Document</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li id="edit" class="dropdown">
+                        <a href="#"
+                           class="dropdown-toggle"
+                           data-toggle="dropdown">
+                              Edit
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#">Copy</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li id="display" class="dropdown">
+                        <a href="#"
+                           class="dropdown-toggle"
+                           data-toggle="dropdown">
+                              Display
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#">Summary</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li id="state" class="dropdown">
+                        <a href="#"
+                           class="dropdown-toggle"
+                           data-toggle="dropdown">
+                              State
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#">published</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Title -->
+            <h1>Title</h1>
+
+            <!-- Content Message -->
+            <div class="alert alert-block">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <h4>Warning!</h4>
+              <p>Best check yo self, you're not...</p>
+            </div>
+
+            <form name="edit_form" method="post" enctype="multipart/form-data" class="edit_form">
+                <div class="tabbable">
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a class="default" href="#default" data-toggle="tab">Default</a></li>
+                    <li><a class="categorization" href="#categorization" data-toggle="tab">Categorization</a></li>
+                    <li><a class="dates" href="#dates" data-toggle="tab">Dates</a></li>
+                    <li><a class="creators" href="#creators" data-toggle="tab">Creators</a></li>
+                    <li><a class="settings" href="#settings" data-toggle="tab">Settings</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="default">
+                      <p>Default</p>
+                    </div>
+                    <div class="tab-pane" id="categorization">
+                      <p>Categorization</p>
+                    </div>
+                    <div class="tab-pane" id="dates">
+                      <p>Dates</p>
+                    </div>
+                    <div class="tab-pane" id="creators">
+                      <p>Creators</p>
+                    </div>
+                    <div class="tab-pane" id="settings">
+                      <p>Settings</p>
+                    </div>
+                  </div> <!-- /tab-content -->
+                </div> <!-- /tabbable -->
+                <div class="formControls"></div>
+            </form>
+          </div> <!-- /editable  -->
+
+          <!-- Content  -->
+          <div id="content">
+            <div class="documentByLine" />
+            <p id="link-presentation" />
+            <div id="content-core" />
+          </div>
+
+          <!-- Related items -->
+          <dl id="relatedItemBox"></dl>
+
+          <!-- Tags -->
+          <div id="category">
+            <span class="badge">
+              <a href="#">Tag</a>
+            </span>
+          </div>
+
+          <!-- Next-/previous navigation -->
+          <ul class="pager">
+            <li><a class="previous" href="#">Previous</a></li>
+            <li><a class="next" href="#">Next</a></li>
+          </ul>
+
+        </div> <!-- /span6  -->
+      </div> <!-- /row  -->
+    </div> <!-- /container -->
+
+    <!-- Footer -->
+    <div class="modal-footer">
+      <div class="container"> 
+          <p class="copyright">
+            Veit Schiele Communications GmbH © 2012
+          </p>
+          <ul class="footer-links">
+              <li><a href="#">Footer links</a></li>
+          </ul>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/google-code-prettify/prettify.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+  </body>
+</html>
+

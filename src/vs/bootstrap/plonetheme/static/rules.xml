@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <rules css:if-content="#visual-portal-wrapper">
+
+        <theme href="theme.html" />
+
+        <!-- Head elements -->
+        <replace css:theme="html head title"
+                 css:content="html head title" />
+        <after css:theme-children="html head" >
+            <link rel="stylesheet" type="text/css" media="screen" href="/++resource++tinymce.stylesheets/tinymce.css" />
+            <script type="text/javascript" src="/tiny_mce.js"></script>
+            <script type="text/javascript" src="/tiny_mce_init.js"></script>
+        </after>
+        <after css:theme-children="html head"
+               css:content="html head meta" />
+        <after css:theme-children="html head"
+               css:content="html head base" />
+
+        <!-- Logo -->
+        <copy attributes="href"
+              css:theme=".brand"
+              css:content="#portal-logo" />
+        <drop css:content="#portaltab-index_html" />
+
+        <!-- Global navigation -->
+        <replace css:theme-children="#globalnav .nav"
+                 css:content-children="#portal-globalnav"
+                 css:if-content="#portal-globalnav" />
+
+        <!-- Search -->
+        <copy attributes="action" css:theme="#global-nav-search" css:content="#portal-searchbox form" />
+        <copy attributes="name" css:theme="#searchbox .search-query" css:content="#portal-searchbox form .searchField" />
+
+        <!-- Language selector -->
+        <replace css:theme-children="#language-selector a.dropdown-toggle"
+                 css:content-children="#portal-languageselector li.currentLanguage a"
+                 css:if-content= "" />
+        <after css:theme-children="#language-selector a.dropdown-toggle"
+                method="raw">
+            <b class="caret"></b>
+        </after>
+        <replace css:theme-children="#language-selector ul.dropdown-menu"
+                 css:content-children="ul#portal-languageselector"
+                 css:if-content="" />
+        <drop css:theme="#language-selector"
+              css:if-not-content="ul#portal-languageselector" />
+
+        <!-- Personal tools -->
+        <replace css:theme="#account a.dropdown-toggle"
+                 css:content="#portal-personaltools li#anon-personalbar a"
+                 css:if-content= "#portal-personaltools li#anon-personalbar a" />
+        <replace css:theme-children="#account a.dropdown-toggle"
+                 css:content-children="#portal-personaltools .actionMenuHeader a#user-name"
+                 css:if-content="#portal-personaltools .actionMenuHeader a#user-name" />
+        <before css:theme-children="#account a.dropdown-toggle"
+                method="raw">
+            <i class="icon-user"></i>
+        </before>
+        <after css:theme-children="#account a.dropdown-toggle"
+                method="raw">
+            <b class="caret"></b>
+        </after>
+        <replace css:theme-children="#account ul.dropdown-menu"
+                 css:content-children="#portal-personaltools dd.actionMenuContent ul"
+                 css:if-content="#portal-personaltools dd.actionMenuContent" />
+
+        <!-- Sidenav -->
+        <replace css:content=".portletNavigationTree .navTreeLevel0 > li"
+                 css:theme=".sidenav li"
+                 css:if-content="" />
+        <drop css:theme-children="#left-column"
+              css:if-not-content=".portletNavigationTree .navTreeLevel0 > li" />
+        <!-- Left portlet manager -->
+        <replace css:content-children="#portletmanager-plone-leftcolumn"
+                 css:theme-children="#portletmanager-plone-leftcolumn"
+                 css:if-content="" />
+        <drop css:theme="#portletmanager-plone-leftcolumn"
+              css:if-not-content="#portletmanager-plone-leftcolumn" />
+        <drop css:theme="#left-column"
+              css:if-content="#portletmanager-plone-leftcolumn" />
+
+        <!-- Breadcrumbs -->
+        <drop css:theme="ul.breadcrumb"
+              css:if-not-content="#portal-breadcrumbs" />
+        <replace css:theme=".breadcrumb li.home a"
+                 css:content="#portal-breadcrumbs span#breadcrumbs-home a"
+                 css:if-content="#portal-breadcrumbs span#breadcrumbs-home a" />
+        <drop css:theme=".breadcrumb li.home"
+              css:if-not-content="#portal-breadcrumbs span#breadcrumbs-home" />
+        <replace css:theme=".breadcrumb li.breadcrumbs-1 a"
+                 css:content="#portal-breadcrumbs span#breadcrumbs-1 a"
+                 css:if-content="#portal-breadcrumbs span#breadcrumbs-1 a" />
+        <drop css:theme=".breadcrumb li.breadcrumbs-1"
+              css:if-not-content="#portal-breadcrumbs span#breadcrumbs-2" />
+        <replace css:theme=".breadcrumb li.breadcrumbs-2 a"
+                 css:content="#portal-breadcrumbs span#breadcrumbs-2 a"
+                 css:if-content="#portal-breadcrumbs span#breadcrumbs-2 a" />
+        <drop css:theme=".breadcrumb li.breadcrumbs-2"
+              css:if-not-content="#portal-breadcrumbs span#breadcrumbs-3" />
+        <replace css:theme=".breadcrumb li.breadcrumbs-3 a"
+                 css:content="#portal-breadcrumbs span#breadcrumbs-3 a"
+                 css:if-content="#portal-breadcrumbs span#breadcrumbs-3 a" />
+        <drop css:theme=".breadcrumb li.breadcrumbs-3"
+              css:if-not-content="#portal-breadcrumbs span#breadcrumbs-4" />
+        <replace css:theme=".breadcrumb li.breadcrumbs-4 a"
+                 css:content="#portal-breadcrumbs span#breadcrumbs-4 a"
+                 css:if-content="#portal-breadcrumbs span#breadcrumbs-4 a" />
+        <drop css:theme=".breadcrumb li.breadcrumbs-4"
+              css:if-not-content="#portal-breadcrumbs span#breadcrumbs-5" />
+        <replace css:theme=".breadcrumb li.breadcrumbs-5 a"
+                 css:content="#portal-breadcrumbs span#breadcrumbs-1 a"
+                 css:if-content="#portal-breadcrumbs span#breadcrumbs-5 a" />
+        <drop css:theme=".breadcrumb li.breadcrumbs-5"
+              css:if-not-content="#portal-breadcrumbs span#breadcrumbs-6" />
+        <replace css:theme=".breadcrumb li.breadcrumbs-6 a"
+                 css:content="#portal-breadcrumbs span#breadcrumbs-6 a"
+                 css:if-content="#portal-breadcrumbs span#breadcrumbs-6 a" />
+        <drop css:theme=".breadcrumb li.breadcrumbs-6"
+              css:if-not-content="#portal-breadcrumbs span#breadcrumbs-7" />
+        <replace css:theme=".breadcrumb li.breadcrumbs-7 a"
+                 css:content="#portal-breadcrumbs span#breadcrumbs-7 a"
+                 css:if-content="#portal-breadcrumbs span#breadcrumbs-7 a" />
+        <drop css:theme=".breadcrumb li.breadcrumbs-7"
+              css:if-not-content="#portal-breadcrumbs span#breadcrumbs-8" />
+        <replace css:theme=".breadcrumb li.active"
+                 css:content="#portal-breadcrumbs span#breadcrumbs-current"
+                 css:if-content="#portal-breadcrumbs span#breadcrumbs-home a" />
+
+        <!-- Edit bar -->
+        <drop css:theme=".editable .navbar"
+              css:if-not-content=".documentEditable" />
+
+        <!-- File -->
+        <replace css:theme-children="#file > a"
+                 css:content-children="#edit-bar p:first-of-type"
+                 css:if-content="#edit-bar p" />
+        <after css:theme-children="#file > a"
+                method="raw">
+            <b class="caret"></b>
+        </after>
+        <replace css:theme="#file ul.dropdown-menu li.view-actions"
+                 css:content-children="#content-views"
+                 css:if-content="" />
+        <drop css:theme="#file"
+              css:if-not-content="#content-views" />
+        <replace css:theme-children="#file ul.dropdown-menu li.manage-portlets"
+                 css:content-children=".managePortletsLink"
+                 css:if-content="" />
+        <replace css:theme-children="#file ul.dropdown-menu li.manage-portlets"
+                 css:content=".managePortletsFallback"
+                 css:if-content="" />
+
+        <!-- Add -->
+        <replace css:theme-children="#add > a"
+                 css:content-children="#plone-contentmenu-factories dt.actionMenuHeader a span:first-of-type"
+                 css:if-content="#plone-contentmenu-factories dt.actionMenuHeader a span" />
+        <after css:theme-children="#add > a"
+                method="raw">
+            <b class="caret"></b>
+        </after>
+        <replace css:theme-children="#add ul.dropdown-menu li"
+                 css:content-children="#plone-contentmenu-factories dd ul"
+                 css:if-content="#plone-contentmenu-factories" />
+        <drop css:theme="#add"
+              css:if-not-content="#plone-contentmenu-factories" />
+
+        <!-- Edit -->
+        <replace css:theme-children="#edit > a"
+                 css:content-children="#plone-contentmenu-actions dt.actionMenuHeader a span:first-of-type"
+                 css:if-content="#plone-contentmenu-actions dt.actionMenuHeader a span" />
+        <after css:theme-children="#edit > a"
+                method="raw">
+            <b class="caret"></b>
+        </after>
+        <replace css:theme-children="#edit ul.dropdown-menu li"
+                 css:content-children="#plone-contentmenu-actions dd ul"
+                 css:if-content="#plone-contentmenu-actions" />
+        <drop css:theme="#edit"
+              css:if-not-content="#plone-contentmenu-actions" />
+
+        <!-- Display -->
+        <replace css:theme-children="#display > a"
+                 css:content-children="#plone-contentmenu-display dt.actionMenuHeader a span:first-of-type"
+                 css:if-content="#plone-contentmenu-display dt.actionMenuHeader a span" />
+        <after css:theme-children="#display > a"
+                method="raw">
+            <b class="caret"></b>
+        </after>
+        <replace css:theme-children="#display ul.dropdown-menu li"
+                 css:content-children="#plone-contentmenu-display dd ul"
+                 css:if-content="#plone-contentmenu-display" />
+        <drop css:theme="#display"
+              css:if-not-content="#plone-contentmenu-display" />
+
+        <!-- State -->
+        <replace css:theme-children="#state > a"
+                 css:content-children="#plone-contentmenu-workflow dt.actionMenuHeader a span:first-of-type"
+                 css:if-content="#plone-contentmenu-workflow dt.actionMenuHeader a span" />
+        <after css:theme-children="#state > a"
+               method="raw">
+            <b class="caret"></b>
+        </after>
+        <replace css:theme-children="#state ul.dropdown-menu li"
+                 css:content-children="#plone-contentmenu-workflow dd ul"
+                 css:if-content="#plone-contentmenu-workflow" />
+        <drop css:theme="#state"
+              css:if-not-content="#plone-contentmenu-workflow" />
+
+        <!-- Title -->
+        <replace css:content-children="h1"
+                 css:theme-children="h1" />
+        <drop css:theme="h1"
+              css:if-not-content="h1" />
+
+        <!-- Document Byline-->
+        <replace css:content-children=".documentByLine"
+                 css:theme-children=".documentByLine" />
+        <drop css:theme=".documentByLine"
+              css:if-not-content=".documentByLine" />
+
+        <!-- Link to presentation -->
+        <replace css:content-children="#link-presentation"
+                 css:theme-children="#link-presentation" />
+        <drop css:theme="#link-presentation"
+              css:if-not-content="#link-presentation" />
+
+        <!-- Alerts -->
+        <replace css:content-children="#content dl.info dt"
+                 css:theme-children=".alert-block h4"
+                 css:if-content="#content dl.info dt"  />
+        <replace css:content-children="#content dl.info dd"
+                 css:theme-children=".alert-block p"
+                 css:if-content="#content dl.info dd" />
+        <drop css:theme=".alert-block"
+              css:if-not-content="#content dl.info" />
+
+        <!-- Edit form -->
+        <rules css:if-content="form #fieldsetlegend-default">
+            <replace css:content-children="form #fieldsetlegend-default"
+                     css:theme-children=".edit_form ul.nav-tabs a.default" />
+            <replace css:content-children="form #fieldset-default"
+                     css:theme-children=".edit_form div.tab-content #default" />
+            <drop css:content="form #fieldset-default legend" />
+        </rules>
+        <rules css:if-content="form #fieldsetlegend-categorization">
+            <replace css:content-children="form #fieldsetlegend-categorization"
+                     css:theme-children=".edit_form ul.nav-tabs a.categorization" />
+            <replace css:content-children="form #fieldset-categorization"
+                     css:theme-children=".edit_form div.tab-content #categorization" />
+            <drop css:content="form #fieldset-categorization legend" />
+        </rules>
+        <rules css:if-content="form #fieldsetlegend-dates">
+            <replace css:content-children="form #fieldsetlegend-dates"
+                     css:theme-children=".edit_form ul.nav-tabs a.dates" />
+            <replace css:content-children="form #fieldset-dates"
+                     css:theme-children=".edit_form div.tab-content #dates" />
+            <drop css:content="form #fieldset-dates legend" />
+        </rules>
+        <rules css:if-content="form #fieldsetlegend-creators">
+            <replace css:content-children="form #fieldsetlegend-creators"
+                     css:theme-children=".edit_form ul.nav-tabs a.creators" />
+            <replace css:content-children="form #fieldset-creators"
+                     css:theme-children=".edit_form div.tab-content #creators" />
+            <drop css:content="form #fieldset-creators legend" />
+        </rules>
+        <rules css:if-content="form #fieldsetlegend-settings">
+            <replace css:content-children="form #fieldsetlegend-settings"
+                     css:theme-children=".edit_form ul.nav-tabs a.settings" />
+            <replace css:content-children="form #fieldset-settings"
+                     css:theme-children=".edit_form div.tab-content #settings" />
+            <drop css:content="form #fieldset-settings legend" />
+        </rules>
+
+        <replace css:content-children="form div.formControls"
+                 css:theme-children=".edit_form div.formControls"
+                 css:if-content="" />
+        <drop css:theme=".edit_form div.formControls"
+              css:if-not-content="form div.formControls" />
+
+        <drop css:theme=".edit_form"
+              css:if-not-content="form.enableFormTabbing" />
+
+        <!-- Content body -->
+        <replace css:content-children="#content-core"
+                 css:theme-children="#content-core" />
+        <drop css:theme="#content-core"
+              css:if-not-content="#content-core" />
+
+        <!-- Related items -->
+        <replace css:content="dl#relatedItemBox"
+                 css:theme="dl#relatedItemBox" />
+        <drop css:theme="dl#relatedItemBox"
+              css:if-not-content="dl#relatedItemBox" />
+
+        <!-- Tags -->
+        <replace css:content="#category span"
+                 css:theme="#category span.badge" />
+        <drop css:content="div#category span.separator" />
+
+        <!-- Next-/previous navigation -->
+        <replace css:content="div.listingBar a.previous"
+                 css:theme="ul.pager a.previous" />
+        <drop css:theme="div.listingBar a.previous"
+              css:if-not-content="ul.pager a.previous" />
+        <replace css:content="div.listingBar a.next"
+                 css:theme="ul.pager a.next" />
+        <drop css:theme="div.listingBar a.next"
+              css:if-not-content="ul.pager a.next" />
+
+        <!-- Footer -->
+        <replace css:theme-children=".modal-footer .container .copyright"
+                 css:content-children="#portal-footer p" />
+        <replace css:theme-children=".modal-footer .container ul.footer-links"
+                 css:content-children="#portal-siteactions" />
+
+        <!-- Contact form -->
+        <replace css:theme-children="#content"
+                 css:content-children="body.template-contact-info #content"
+                 css:if-content="" />
+
+        <!-- Search -->
+        <drop css:content="#search-results-bar .actionMenu" />
+
+        <!-- Login form -->
+        <replace css:theme-children="#content"
+                 css:content-children="body.template-login_form #content"
+                 css:if-content="" />
+
+        <!-- Dashboard -->
+        <replace css:theme-children="#content"
+                 css:content-children="body.template-dashboard #content"
+                 css:if-content="" />
+
+        <!-- Control panel -->
+        <replace css:theme-children="#content"
+                 css:content-children="body.template-overview-controlpanel #content"
+                 css:if-content="" />
+
+    </rules>
+
+</rules>
+
