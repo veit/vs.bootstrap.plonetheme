@@ -28,6 +28,7 @@ Using zip
     $ cd vs.bootstrap.plonetheme
     $ git archive --format=zip --prefix=bootstrap/ HEAD:src/vs/bootstrap/plonetheme/static/ > bootstrap.zip
 
+#. Activate *Diazo theme support* in the Plone control panel *Add-ons*.
 #. Import this zip file in the *Import theme* tab of the *Theme Settings* view:
    ``@@theming-controlpanel``.
 #. Activate theme in the *Basic settings* tab:
