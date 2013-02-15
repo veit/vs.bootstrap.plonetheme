@@ -77,9 +77,9 @@ Font Awesome
  <http://scripts.sil.org/OFL>`_.
 
  CSS, LESS, and SASS files licensed under the
- ` MIT License
+ `MIT License
  <http://opensource.org/licenses/mit-license.html>`_.
 
- Pictograms licensed under the ` CC BY 3.0 License
+ Pictograms licensed under the `CC BY 3.0 License
  <http://creativecommons.org/licenses/by/3.0/>`_.
 
