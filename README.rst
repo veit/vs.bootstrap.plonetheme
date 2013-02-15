@@ -37,3 +37,49 @@ Using zip
    #. Enable theme
    #. Save
 
+Bug tracker
+===========
+
+Have a bug? Please create an issue here on GitHub that conforms with
+`necolass guidelines <https://github.com/necolas/issue-guidelines>`_:
+
+`Issues <https://github.com/veit/vs.bootstrap.plonetheme/issues>`_
+
+Author
+======
+
+Veit Schiele
+
+- `github <https://github.com/veit>`_
+- `Twitter <https://twitter.com/VeitSchiele>`_
+
+Copyrights and licenses
+=======================
+
+vs.bootstrap.plonetheme
+ Copyright 2012 Veit Schiele
+
+ Licensed under GPL version 2.
+
+Diazo
+ Copyright Plone Foundation
+
+ Licensed under a BSD-like License.
+ 
+Bootstrap
+ Copyright 2012 Twitter, Inc.
+
+ Licensed under the `Apache License v2.0
+ <http://www.apache.org/licenses/LICENSE-2.0>`_.
+
+Font Awesome
+ Font licensed under the `SIL Open Font License
+ <http://scripts.sil.org/OFL>`_.
+
+ CSS, LESS, and SASS files licensed under the
+ ` MIT License
+ <http://opensource.org/licenses/mit-license.html>`_.
+
+ Pictograms licensed under the ` CC BY 3.0 License
+ <http://creativecommons.org/licenses/by/3.0/>`_.
+
