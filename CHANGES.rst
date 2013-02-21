@@ -1,6 +1,14 @@
 Changelog
 =========
 
+1.0.1 (2013-01-21)
+------------------
+
+-  Added hero unit
+  [Veit Schiele]
+- Switched to 9 span main column
+  [Veit Schiele]
+
 1.0 (2013-01-15)
 ----------------
 
