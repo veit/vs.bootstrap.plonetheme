@@ -217,6 +217,12 @@
         <drop css:theme="h1"
               css:if-not-content="h1" />
 
+        <!-- Description -->
+        <replace css:content-children=".documentDescription"
+                 css:theme-children=".hero-unit p" />
+        <drop css:theme=".hero-unit p"
+              css:if-not-content=".documentDescription" />
+
         <!-- Document Byline-->
         <replace css:content-children=".documentByLine"
                  css:theme-children=".documentByLine" />
