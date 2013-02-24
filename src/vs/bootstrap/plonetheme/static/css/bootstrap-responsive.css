@@ -5,7 +5,7 @@
 @import url("http://fonts.googleapis.com/css?family=Droid+Sans+Mono:400");
 
 /*!
- * Bootstrap Responsive v2.2.2
+ * Bootstrap Responsive v2.3.0
  *
  * Copyright 2012 Twitter, Inc
  * Licensed under the Apache License v2.0
@@ -13,10 +13,6 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-
-@-ms-viewport  {
-  width: device-width;
-}
 
 .clearfix {
   *zoom: 1;
@@ -48,6 +44,10 @@
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@-ms-viewport {
+  width: device-width;
 }
 
 .hidden {
@@ -97,6 +97,19 @@
     display: inherit !important;
   }
   .hidden-phone {
+    display: none !important;
+  }
+}
+
+.visible-print {
+  display: none !important;
+}
+
+@media print {
+  .visible-print {
+    display: inherit !important;
+  }
+  .hidden-print {
     display: none !important;
   }
 }
@@ -806,19 +819,19 @@
   .container-fluid {
     padding: 0;
   }
-  .dl-horizontal dt,
-  .eventDetails dt,
+  .eventDetails .eventDetail h3,
   .dl-horizontal .eventDetail h3,
-  .eventDetails .eventDetail h3 {
+  .eventDetails dt,
+  .dl-horizontal dt {
     float: none;
     width: auto;
     clear: none;
     text-align: left;
   }
-  .dl-horizontal dd,
-  .eventDetails dd,
+  .eventDetails .eventDetail div,
   .dl-horizontal .eventDetail div,
-  .eventDetails .eventDetail div {
+  .eventDetails dd,
+  .dl-horizontal dd {
     margin-left: 0;
   }
   .container {
@@ -1015,7 +1028,9 @@
     margin-bottom: 2px;
   }
   .nav-collapse .nav > li > a:hover,
-  .nav-collapse .dropdown-menu a:hover {
+  .nav-collapse .nav > li > a:focus,
+  .nav-collapse .dropdown-menu a:hover,
+  .nav-collapse .dropdown-menu a:focus {
     background-color: #f2f2f2;
   }
   .navbar-inverse .nav-collapse .nav > li > a,
@@ -1023,7 +1038,9 @@
     color: #999999;
   }
   .navbar-inverse .nav-collapse .nav > li > a:hover,
-  .navbar-inverse .nav-collapse .dropdown-menu a:hover {
+  .navbar-inverse .nav-collapse .nav > li > a:focus,
+  .navbar-inverse .nav-collapse .dropdown-menu a:hover,
+  .navbar-inverse .nav-collapse .dropdown-menu a:focus {
     background-color: #111111;
   }
   .nav-collapse.in .btn-group {
