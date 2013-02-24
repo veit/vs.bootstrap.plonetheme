@@ -1,6 +1,16 @@
 Changelog
 =========
 
+1.0.2 (2013-02-25)
+------------------
+
+- Added rules for plone glossary
+  [Veit Schiele]
+- Added document actions
+  [Veit Schiele]
+- Updated to bootstrap 2.3
+  [Veit Schiele]
+
 1.0.1 (2013-02-21)
 ------------------
 
