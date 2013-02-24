@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- Glossary -->
+    <rules css:if-content="#glossary"> 
+
+<!--
+        <replace css:theme="#content-core"
+                 css:content="#content-core"
+                 href="glossarytheme.html"
+                 method="document" />
+-->
+        <replace css:content-children=".glossaryAbcedaire"
+                 css:theme-children=".index"
+                 if-content="" />
+        <replace css:content="#glossary form"
+                 css:theme=".glossary_search"
+                 if-content="" />
+        <replace css:content-children="#glossary dl"
+                 css:theme-children=".glossaryItems"
+                 if-content="" />
+
+    </rules>
+
+    <!-- Glossary item  -->
+    <rules css:if-content="#glossary-definition">
+
+        <after content-children="//*[@id='glossary-definition']/div[1]"
+               css:theme-children="#content-core"
+               css:if-not-content=".documentByLine" />
+        <after content-children="//*[@id='glossary-definition']/div[2]"
+               css:theme-children="#content-core"
+               css:if-content=".documentByLine" />
+
+    </rules>
+
+</rules>
+

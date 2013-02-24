@@ -2,7 +2,8 @@
 <rules
     xmlns="http://namespaces.plone.org/diazo"
     xmlns:css="http://namespaces.plone.org/diazo/css"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <rules css:if-content="#visual-portal-wrapper">
 
@@ -293,9 +294,8 @@
 
         <!-- Content body -->
         <replace css:content-children="#content-core"
-                 css:theme-children="#content-core" />
-        <drop css:theme="#content-core"
-              css:if-not-content="#content-core" />
+                 css:theme-children="#content-core"
+                 css:if-content="" />
 
         <!-- Related items -->
         <replace css:content="dl#relatedItemBox"
@@ -356,6 +356,8 @@
                  css:if-content="" />
 
     </rules>
+
+    <xi:include href="glossaryrules.xml" />
 
 </rules>
 
