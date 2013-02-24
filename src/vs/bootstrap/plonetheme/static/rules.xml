@@ -303,6 +303,14 @@
         <drop css:theme="dl#relatedItemBox"
               css:if-not-content="dl#relatedItemBox" />
 
+        <!-- Document actions -->
+        <before css:content-children=".documentActions p"
+                css:theme-children="#documentActions a.dropdown-toggle" />
+        <drop css:theme="#documentActions"
+              css:if-not-content=".documentActions li" />
+        <replace css:content=".documentActions li"
+                 css:theme-children="#documentActions ul.dropdown-menu" />
+
         <!-- Tags -->
         <replace css:content="#category span"
                  css:theme="#category span.badge" />
