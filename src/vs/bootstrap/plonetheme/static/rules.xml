@@ -35,7 +35,6 @@
 
         <!-- Search -->
         <copy attributes="action" css:theme="#global-nav-search" css:content="#portal-searchbox form" />
-        <copy attributes="name" css:theme="#searchbox .search-query" css:content="#portal-searchbox form .searchField" />
 
         <!-- Language selector -->
         <replace css:theme-children="#language-selector a.dropdown-toggle"
