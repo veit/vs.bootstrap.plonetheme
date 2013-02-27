@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.0.3 (2013-02-27)
+------------------
+
+- Fixed search field in navbar
+  [Veit Schiele]
+
 1.0.2 (2013-02-25)
 ------------------
 
