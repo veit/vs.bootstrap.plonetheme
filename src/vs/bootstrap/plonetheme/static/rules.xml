@@ -325,6 +325,14 @@
         <drop css:theme="div.listingBar a.next"
               css:if-not-content="ul.pager a.next" />
 
+        <!-- Analytics -->
+        <after css:theme=".modal-footer"
+                 css:content="#portal-footer-wrapper script"
+                 css:if-content="" />
+        <after css:theme=".modal-footer"
+                 css:content="#portal-footer-wrapper noscript"
+                 css:if-content="" />
+
         <!-- Footer -->
         <replace css:theme-children=".modal-footer .container .copyright"
                  css:content-children="#portal-footer p" />
