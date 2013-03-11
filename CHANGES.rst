@@ -6,13 +6,11 @@ Changelog
 
 - More restrictive rule for contact form
   [Veit Schiele]
-- Added condition for caret in file menu
-  [Veit Schiele]
-- Added condition for hero unit
-  [Veit Schiele]
-- Refactored plone edit rules
-  [Veit Schiele]
-- Renamed glossary rule and theme
+
+1.0.4 (2013-03-03)
+------------------
+
+- Added rules for analytics
   [Veit Schiele]
 
 1.0.3 (2013-02-27)
