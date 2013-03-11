@@ -214,8 +214,8 @@
                  css:if-content="" />
 
         <!-- Contact form -->
-        <replace css:theme-children="#content"
-                 css:content-children="body.template-contact-info #content"
+        <replace css:theme="#content > div"
+                 css:content-children="body.template-contact-info #content > div"
                  css:if-content="" />
 
         <!-- Search -->
