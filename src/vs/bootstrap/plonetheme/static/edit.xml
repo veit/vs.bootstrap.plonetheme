@@ -16,9 +16,10 @@
         <!-- File -->
         <replace css:theme-children="#file > a"
                  css:content-children="#edit-bar p:first-of-type"
-                 css:if-content="#edit-bar p" />
+                 css:if-content="" />
         <after css:theme-children="#file > a"
-                method="raw">
+                method="raw"
+                css:if-content="#edit-bar p:first-of-type">
             <b class="caret"></b>
         </after>
         <replace css:theme="#file ul.dropdown-menu li.view-actions"
