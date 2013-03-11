@@ -134,7 +134,7 @@
         <!-- Title -->
         <replace css:content-children="h1"
                  css:theme-children="h1" />
-        <drop css:theme="h1"
+        <drop css:theme=".hero-unit"
               css:if-not-content="h1" />
 
         <!-- Description -->
