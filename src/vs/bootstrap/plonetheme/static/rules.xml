@@ -364,7 +364,7 @@
 
     </rules>
 
-    <xi:include href="glossaryrules.xml" />
+    <xi:include href="glossary.xml" />
 
 </rules>
 
