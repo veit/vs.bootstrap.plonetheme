@@ -131,86 +131,6 @@
                  css:content="#portal-breadcrumbs span#breadcrumbs-current"
                  css:if-content="#portal-breadcrumbs span#breadcrumbs-home a" />
 
-        <!-- Edit bar -->
-        <drop css:theme=".editable .navbar"
-              css:if-not-content=".documentEditable" />
-
-        <!-- File -->
-        <replace css:theme-children="#file > a"
-                 css:content-children="#edit-bar p:first-of-type"
-                 css:if-content="#edit-bar p" />
-        <after css:theme-children="#file > a"
-                method="raw">
-            <b class="caret"></b>
-        </after>
-        <replace css:theme="#file ul.dropdown-menu li.view-actions"
-                 css:content-children="#content-views"
-                 css:if-content="" />
-        <drop css:theme="#file"
-              css:if-not-content="#content-views" />
-        <replace css:theme-children="#file ul.dropdown-menu li.manage-portlets"
-                 css:content-children=".managePortletsLink"
-                 css:if-content="" />
-        <replace css:theme-children="#file ul.dropdown-menu li.manage-portlets"
-                 css:content=".managePortletsFallback"
-                 css:if-content="" />
-
-        <!-- Add -->
-        <replace css:theme-children="#add > a"
-                 css:content-children="#plone-contentmenu-factories dt.actionMenuHeader a span:first-of-type"
-                 css:if-content="#plone-contentmenu-factories dt.actionMenuHeader a span" />
-        <after css:theme-children="#add > a"
-                method="raw">
-            <b class="caret"></b>
-        </after>
-        <replace css:theme-children="#add ul.dropdown-menu li"
-                 css:content-children="#plone-contentmenu-factories dd ul"
-                 css:if-content="#plone-contentmenu-factories" />
-        <drop css:theme="#add"
-              css:if-not-content="#plone-contentmenu-factories" />
-
-        <!-- Edit -->
-        <replace css:theme-children="#edit > a"
-                 css:content-children="#plone-contentmenu-actions dt.actionMenuHeader a span:first-of-type"
-                 css:if-content="#plone-contentmenu-actions dt.actionMenuHeader a span" />
-        <after css:theme-children="#edit > a"
-                method="raw">
-            <b class="caret"></b>
-        </after>
-        <replace css:theme-children="#edit ul.dropdown-menu li"
-                 css:content-children="#plone-contentmenu-actions dd ul"
-                 css:if-content="#plone-contentmenu-actions" />
-        <drop css:theme="#edit"
-              css:if-not-content="#plone-contentmenu-actions" />
-
-        <!-- Display -->
-        <replace css:theme-children="#display > a"
-                 css:content-children="#plone-contentmenu-display dt.actionMenuHeader a span:first-of-type"
-                 css:if-content="#plone-contentmenu-display dt.actionMenuHeader a span" />
-        <after css:theme-children="#display > a"
-                method="raw">
-            <b class="caret"></b>
-        </after>
-        <replace css:theme-children="#display ul.dropdown-menu li"
-                 css:content-children="#plone-contentmenu-display dd ul"
-                 css:if-content="#plone-contentmenu-display" />
-        <drop css:theme="#display"
-              css:if-not-content="#plone-contentmenu-display" />
-
-        <!-- State -->
-        <replace css:theme-children="#state > a"
-                 css:content-children="#plone-contentmenu-workflow dt.actionMenuHeader a span:first-of-type"
-                 css:if-content="#plone-contentmenu-workflow dt.actionMenuHeader a span" />
-        <after css:theme-children="#state > a"
-               method="raw">
-            <b class="caret"></b>
-        </after>
-        <replace css:theme-children="#state ul.dropdown-menu li"
-                 css:content-children="#plone-contentmenu-workflow dd ul"
-                 css:if-content="#plone-contentmenu-workflow" />
-        <drop css:theme="#state"
-              css:if-not-content="#plone-contentmenu-workflow" />
-
         <!-- Title -->
         <replace css:content-children="h1"
                  css:theme-children="h1" />
@@ -244,52 +164,6 @@
                  css:if-content="#content dl.info dd" />
         <drop css:theme=".alert-block"
               css:if-not-content="#content dl.info" />
-
-        <!-- Edit form -->
-        <rules css:if-content="form #fieldsetlegend-default">
-            <replace css:content-children="form #fieldsetlegend-default"
-                     css:theme-children=".edit_form ul.nav-tabs a.default" />
-            <replace css:content-children="form #fieldset-default"
-                     css:theme-children=".edit_form div.tab-content #default" />
-            <drop css:content="form #fieldset-default legend" />
-        </rules>
-        <rules css:if-content="form #fieldsetlegend-categorization">
-            <replace css:content-children="form #fieldsetlegend-categorization"
-                     css:theme-children=".edit_form ul.nav-tabs a.categorization" />
-            <replace css:content-children="form #fieldset-categorization"
-                     css:theme-children=".edit_form div.tab-content #categorization" />
-            <drop css:content="form #fieldset-categorization legend" />
-        </rules>
-        <rules css:if-content="form #fieldsetlegend-dates">
-            <replace css:content-children="form #fieldsetlegend-dates"
-                     css:theme-children=".edit_form ul.nav-tabs a.dates" />
-            <replace css:content-children="form #fieldset-dates"
-                     css:theme-children=".edit_form div.tab-content #dates" />
-            <drop css:content="form #fieldset-dates legend" />
-        </rules>
-        <rules css:if-content="form #fieldsetlegend-creators">
-            <replace css:content-children="form #fieldsetlegend-creators"
-                     css:theme-children=".edit_form ul.nav-tabs a.creators" />
-            <replace css:content-children="form #fieldset-creators"
-                     css:theme-children=".edit_form div.tab-content #creators" />
-            <drop css:content="form #fieldset-creators legend" />
-        </rules>
-        <rules css:if-content="form #fieldsetlegend-settings">
-            <replace css:content-children="form #fieldsetlegend-settings"
-                     css:theme-children=".edit_form ul.nav-tabs a.settings" />
-            <replace css:content-children="form #fieldset-settings"
-                     css:theme-children=".edit_form div.tab-content #settings" />
-            <drop css:content="form #fieldset-settings legend" />
-        </rules>
-
-        <replace css:content-children="form div.formControls"
-                 css:theme-children=".edit_form div.formControls"
-                 css:if-content="" />
-        <drop css:theme=".edit_form div.formControls"
-              css:if-not-content="form div.formControls" />
-
-        <drop css:theme=".edit_form"
-              css:if-not-content="form.enableFormTabbing" />
 
         <!-- Content body -->
         <replace css:content-children="#content-core"
@@ -325,6 +199,12 @@
         <drop css:theme="div.listingBar a.next"
               css:if-not-content="ul.pager a.next" />
 
+        <!-- Footer -->
+        <replace css:theme-children=".modal-footer .container .copyright"
+                 css:content-children="#portal-footer p" />
+        <replace css:theme-children=".modal-footer .container ul.footer-links"
+                 css:content-children="#portal-siteactions" />
+
         <!-- Analytics -->
         <after css:theme=".modal-footer"
                  css:content="#portal-footer-wrapper script"
@@ -332,12 +212,6 @@
         <after css:theme=".modal-footer"
                  css:content="#portal-footer-wrapper noscript"
                  css:if-content="" />
-
-        <!-- Footer -->
-        <replace css:theme-children=".modal-footer .container .copyright"
-                 css:content-children="#portal-footer p" />
-        <replace css:theme-children=".modal-footer .container ul.footer-links"
-                 css:content-children="#portal-siteactions" />
 
         <!-- Contact form -->
         <replace css:theme-children="#content"
@@ -364,6 +238,7 @@
 
     </rules>
 
+    <xi:include href="edit.xml" />
     <xi:include href="glossary.xml" />
 
 </rules>
